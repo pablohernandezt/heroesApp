@@ -1,0 +1,38 @@
+<h1 class="animated fadeIn">{{this.heroe.nombre | uppercase}} <small>({{this.heroe.aparicion | date:'y'}})</small></h1>
+
+<hr>
+
+<div class="row animated fadeIn">
+
+    <div class="col-md-4">
+
+        <img [src]="heroe.img" class="img-fluid" alt="">
+        <br><br>
+        <a href="heroes" class="btn btn-outline-danger btn-block">Regresar</a>
+
+    </div>
+
+    <div class="col-md-8">
+
+        <h3 class="card-title">{{this.heroe.nombre}}</h3>
+        <hr>
+        <p class="card-title">
+            <p>{{this.heroe.bio}}
+                <p>
+                </p>
+                <div *ngIf="(this.heroe.casa == 'Marvel')">
+                    <h4>Este heroe pertenece a {{this.heroe.casa}}</h4>
+                    <img class="img-logo" src="assets/img/marvel-icon.jpg" alt="">
+                    <!-- Dependiendo a que comic pertenezca sale una imagen u otra-->
+                </div>
+                <div *ngIf="(this.heroe.casa == 'DC')">
+                    <h4>Este heroe pertenece a {{this.heroe.casa}}</h4>
+                    <img class="img-logo" src="assets/img/dc-icon.png" alt="">
+                    <!-- Dependiendo a que comic pertenezca sale una imagen u otra-->
+                </div>
+
+    </div>
+
+
+
+</div>
